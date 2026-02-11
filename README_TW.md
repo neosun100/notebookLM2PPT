@@ -1,11 +1,11 @@
 [English](README.md) | [简体中文](README_CN.md) | [繁體中文](README_TW.md) | [日本語](README_JP.md)
 
-# pdf2ppt
+# notebookLM2PPT
 
-[![PyPI version](https://badge.fury.io/py/pdfslides2ppt.svg)](https://badge.fury.io/py/pdfslides2ppt)
-[![Python](https://img.shields.io/pypi/pyversions/pdfslides2ppt.svg)](https://pypi.org/project/pdfslides2ppt/)
+[![PyPI version](https://badge.fury.io/py/notebooklm2ppt.svg)](https://badge.fury.io/py/notebooklm2ppt)
+[![Python](https://img.shields.io/pypi/pyversions/notebooklm2ppt.svg)](https://pypi.org/project/notebooklm2ppt/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/neosun100/pdf2ppt.svg)](https://github.com/neosun100/pdf2ppt/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/neosun100/notebookLM2PPT.svg)](https://github.com/neosun100/notebookLM2PPT/stargazers)
 
 將 PDF 簡報轉換為 PowerPoint 演示文稿，使用**向量圖形**保持最高解析度。
 
@@ -32,7 +32,7 @@
 
 ```bash
 # 使用 pipx 安裝（推薦）
-pipx install pdfslides2ppt
+pipx install notebooklm2ppt
 
 # 轉換 PDF 到 PPT
 pdf2ppt input.pdf output.pptx
@@ -42,17 +42,17 @@ pdf2ppt input.pdf output.pptx
 
 **x86_64 / AMD64 架構（Linux 伺服器、Intel Mac）：**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:1.2.0-amd64
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:1.2.0-amd64
 ```
 
 **ARM64 架構（Apple Silicon Mac、ARM 伺服器）：**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:1.2.0-arm64
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:1.2.0-arm64
 ```
 
 **自動檢測架構：**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:latest
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:latest
 ```
 
 **訪問地址：** http://localhost:8100
@@ -61,7 +61,7 @@ docker run -d -p 8100:8100 neosun/pdf2ppt:latest
 
 ```bash
 # 安裝伺服器依賴
-pip install "pdfslides2ppt[server]"
+pip install "notebooklm2ppt[server]"
 
 # 啟動伺服器
 python -m uvicorn web.app:app --host 0.0.0.0 --port 8100
@@ -97,10 +97,10 @@ sudo apt-get install pdf2svg inkscape
 
 ```bash
 # 推薦：使用 pipx 安裝（隔離環境）
-pipx install pdfslides2ppt
+pipx install notebooklm2ppt
 
 # 或使用 pip 安裝
-pip install pdfslides2ppt
+pip install notebooklm2ppt
 ```
 
 ## 📖 使用方法
@@ -182,7 +182,7 @@ pdf2ppt input.pdf --no-clean
 
 由於依賴庫的限制，帶有透明度的元素可能無法完全支援。檢測到此類問題時會收到警告。您可以手動複製生成的 SVG 來修復問題。
 
-詳見 [#1](https://github.com/neosun100/pdf2ppt/issues/1)。
+詳見 [#1](https://github.com/neosun100/notebookLM2PPT/issues/1)。
 
 ## 🤝 貢獻
 
@@ -202,7 +202,7 @@ pdf2ppt input.pdf --no-clean
 
 ## ⭐ Star 歷史
 
-[![Star History Chart](https://api.star-history.com/svg?repos=neosun100/pdf2ppt&type=Date)](https://star-history.com/#neosun100/pdf2ppt)
+[![Star History Chart](https://api.star-history.com/svg?repos=neosun100/notebookLM2PPT&type=Date)](https://star-history.com/#neosun100/notebookLM2PPT)
 
 ## 📱 關注公眾號
 

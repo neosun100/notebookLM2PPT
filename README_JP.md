@@ -1,11 +1,11 @@
 [English](README.md) | [简体中文](README_CN.md) | [繁體中文](README_TW.md) | [日本語](README_JP.md)
 
-# pdf2ppt
+# notebookLM2PPT
 
-[![PyPI version](https://badge.fury.io/py/pdfslides2ppt.svg)](https://badge.fury.io/py/pdfslides2ppt)
-[![Python](https://img.shields.io/pypi/pyversions/pdfslides2ppt.svg)](https://pypi.org/project/pdfslides2ppt/)
+[![PyPI version](https://badge.fury.io/py/notebooklm2ppt.svg)](https://badge.fury.io/py/notebooklm2ppt)
+[![Python](https://img.shields.io/pypi/pyversions/notebooklm2ppt.svg)](https://pypi.org/project/notebooklm2ppt/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/neosun100/pdf2ppt.svg)](https://github.com/neosun100/pdf2ppt/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/neosun100/notebookLM2PPT.svg)](https://github.com/neosun100/notebookLM2PPT/stargazers)
 
 PDFスライドを**ベクターグラフィックス**（最高解像度）でPowerPointプレゼンテーションに変換します。
 
@@ -32,7 +32,7 @@ PDFスライドを**ベクターグラフィックス**（最高解像度）でP
 
 ```bash
 # pipxでインストール（推奨）
-pipx install pdfslides2ppt
+pipx install notebooklm2ppt
 
 # PDFをPPTに変換
 pdf2ppt input.pdf output.pptx
@@ -42,17 +42,17 @@ pdf2ppt input.pdf output.pptx
 
 **x86_64 / AMD64 アーキテクチャ（Linuxサーバー、Intel Mac）：**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:1.2.0-amd64
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:1.2.0-amd64
 ```
 
 **ARM64 アーキテクチャ（Apple Silicon Mac、ARMサーバー）：**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:1.2.0-arm64
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:1.2.0-arm64
 ```
 
 **アーキテクチャ自動検出：**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:latest
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:latest
 ```
 
 **アクセス：** http://localhost:8100
@@ -61,7 +61,7 @@ docker run -d -p 8100:8100 neosun/pdf2ppt:latest
 
 ```bash
 # サーバー依存関係をインストール
-pip install "pdfslides2ppt[server]"
+pip install "notebooklm2ppt[server]"
 
 # サーバー起動
 python -m uvicorn web.app:app --host 0.0.0.0 --port 8100
@@ -93,14 +93,14 @@ sudo apt-get install pdf2svg inkscape
 - [pdf2svg](https://github.com/dawbarton/pdf2svg) と [Inkscape](https://inkscape.org/) をダウンロードしてインストール
 - システムPATHに追加
 
-### pdf2pptのインストール
+### notebookLM2PPTのインストール
 
 ```bash
 # 推奨：pipxでインストール（隔離環境）
-pipx install pdfslides2ppt
+pipx install notebooklm2ppt
 
 # またはpipでインストール
-pip install pdfslides2ppt
+pip install notebooklm2ppt
 ```
 
 ## 📖 使用方法
@@ -182,7 +182,7 @@ pdf2ppt input.pdf --no-clean
 
 依存ライブラリの制限により、透明度を持つ要素は完全にサポートされていません。このような問題が検出されると警告が表示されます。生成されたSVGを手動でコピーして問題を修正できます。
 
-詳細は [#1](https://github.com/neosun100/pdf2ppt/issues/1) を参照してください。
+詳細は [#1](https://github.com/neosun100/notebookLM2PPT/issues/1) を参照してください。
 
 ## 🤝 コントリビューション
 
@@ -202,7 +202,7 @@ Copyright © 2023-2024 Teddy van Jerry ([Wuqiong Zhao](https://wqzhao.org))
 
 ## ⭐ Star履歴
 
-[![Star History Chart](https://api.star-history.com/svg?repos=neosun100/pdf2ppt&type=Date)](https://star-history.com/#neosun100/pdf2ppt)
+[![Star History Chart](https://api.star-history.com/svg?repos=neosun100/notebookLM2PPT&type=Date)](https://star-history.com/#neosun100/notebookLM2PPT)
 
 ## 📱 フォローする
 

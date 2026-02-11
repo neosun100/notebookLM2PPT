@@ -1,11 +1,11 @@
 [English](README.md) | [简体中文](README_CN.md) | [繁體中文](README_TW.md) | [日本語](README_JP.md)
 
-# pdf2ppt
+# notebookLM2PPT
 
-[![PyPI version](https://badge.fury.io/py/pdfslides2ppt.svg)](https://badge.fury.io/py/pdfslides2ppt)
-[![Python](https://img.shields.io/pypi/pyversions/pdfslides2ppt.svg)](https://pypi.org/project/pdfslides2ppt/)
+[![PyPI version](https://badge.fury.io/py/notebooklm2ppt.svg)](https://badge.fury.io/py/notebooklm2ppt)
+[![Python](https://img.shields.io/pypi/pyversions/notebooklm2ppt.svg)](https://pypi.org/project/notebooklm2ppt/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub stars](https://img.shields.io/github/stars/neosun100/pdf2ppt.svg)](https://github.com/neosun100/pdf2ppt/stargazers)
+[![GitHub stars](https://img.shields.io/github/stars/neosun100/notebookLM2PPT.svg)](https://github.com/neosun100/notebookLM2PPT/stargazers)
 
 Convert PDF Slides to PowerPoint Presentations with **Vector Graphics** (highest resolution).
 
@@ -52,7 +52,7 @@ Convert PDF Slides to PowerPoint Presentations with **Vector Graphics** (highest
 
 ```bash
 # Install via pipx (recommended)
-pipx install pdfslides2ppt
+pipx install notebooklm2ppt
 
 # Convert PDF to PPT
 pdf2ppt input.pdf output.pptx
@@ -62,17 +62,17 @@ pdf2ppt input.pdf output.pptx
 
 **For x86_64 / AMD64 (Linux servers, Intel Macs):**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:1.2.0-amd64
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:1.2.0-amd64
 ```
 
 **For ARM64 (Apple Silicon Macs, ARM servers):**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:1.2.0-arm64
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:1.2.0-arm64
 ```
 
 **Auto-detect architecture:**
 ```bash
-docker run -d -p 8100:8100 neosun/pdf2ppt:latest
+docker run -d -p 8100:8100 neosun/notebooklm2ppt:latest
 ```
 
 **Access at:** http://localhost:8100
@@ -81,7 +81,7 @@ docker run -d -p 8100:8100 neosun/pdf2ppt:latest
 
 ```bash
 # Install with server dependencies
-pip install "pdfslides2ppt[server]"
+pip install "notebooklm2ppt[server]"
 
 # Start server
 python -m uvicorn web.app:app --host 0.0.0.0 --port 8100
@@ -113,14 +113,14 @@ sudo apt-get install pdf2svg inkscape
 - Download and install [pdf2svg](https://github.com/dawbarton/pdf2svg) and [Inkscape](https://inkscape.org/)
 - Add them to your PATH
 
-### Install pdf2ppt
+### Install notebookLM2PPT
 
 ```bash
 # Recommended: Install with pipx (isolated environment)
-pipx install pdfslides2ppt
+pipx install notebooklm2ppt
 
 # Or install with pip
-pip install pdfslides2ppt
+pip install notebooklm2ppt
 ```
 
 ## 📖 Usage
@@ -202,7 +202,7 @@ options:
 
 Elements with transparency are not fully supported due to dependency limitations. You will receive a warning when such issues are detected. You can manually copy the generated SVG to fix the problem.
 
-See [#1](https://github.com/neosun100/pdf2ppt/issues/1) for more details.
+See [#1](https://github.com/neosun100/notebookLM2PPT/issues/1) for more details.
 
 ## 🤝 Contributing
 
@@ -222,7 +222,7 @@ Copyright © 2023-2024 Teddy van Jerry ([Wuqiong Zhao](https://wqzhao.org))
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=neosun100/pdf2ppt&type=Date)](https://star-history.com/#neosun100/pdf2ppt)
+[![Star History Chart](https://api.star-history.com/svg?repos=neosun100/notebookLM2PPT&type=Date)](https://star-history.com/#neosun100/notebookLM2PPT)
 
 ## 📱 Follow Us
 
