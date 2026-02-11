@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  pdf2ppt:
+    build: .
+    image: neosun/notebooklm2ppt:latest
+    container_name: pdf2ppt
+    ports:
+      - "8102:8100"
+    environment:
+      - PORT=8100
+    volumes:
+      - ./uploads:/tmp/pdf2ppt/uploads
+      - ./outputs:/tmp/pdf2ppt/outputs
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8100/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF2PPT - Convert PDF Slides to PowerPoint</title>
+    <link rel="stylesheet" href="/static/css/style.css?v=1.3.0">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>📄 PDF2PPT</h1>
+                <p class="subtitle">Convert PDF Slides to PowerPoint with Vector Graphics</p>
+            </div>
+            <div class="header-actions">
+                <a href="/docs" target="_blank" class="api-docs-btn">📚 API Docs</a>
+                <div class="language-selector">
+                    <select id="language" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="zh-CN">简体中文</option>
+                        <option value="zh-TW">繁體中文</option>
+                        <option value="ja">日本語</option>
+                        <option value="ko">한국어</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                        <option value="es">Español</option>
+                        <option value="pt">Português</option>
+                        <option value="it">Italiano</option>
+                        <option value="ru">Русский</option>
+                        <option value="ar">العربية</option>
+                        <option value="hi">हिन्दी</option>
+                        <option value="th">ไทย</option>
+                        <option value="vi">Tiếng Việt</option>
+                        <option value="nl">Nederlands</option>
+                        <option value="pl">Polski</option>
+                        <option value="tr">Türkçe</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📤</div>
+                    <h2 data-i18n="upload.title">Drop PDF files here or click to browse</h2>
+                    <p data-i18n="upload.subtitle">Support single or multiple PDF files</p>
+                    <input type="file" id="fileInput" accept=".pdf" multiple hidden>
+                    <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+                        <span data-i18n="upload.button">Select Files</span>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Options Section -->
+            <section class="options-section">
+                <h3 data-i18n="options.title">Conversion Options</h3>
+                
+                <div class="options-grid">
+                    <!-- Page Range -->
+                    <div class="option-group">
+                        <label for="pageRange">
+                            <span data-i18n="options.pages">Page Range</span>
+                            <span class="tooltip" title="e.g., 1-5,7,9-11">ℹ️</span>
+                        </label>
+                        <input type="text" id="pageRange" placeholder="All pages (leave empty)" />
+                    </div>
+
+                    <!-- Parallel Workers -->
+                    <div class="option-group">
+                        <label for="parallel">
+                            <span data-i18n="options.parallel">Parallel Workers</span>
+                            <span class="tooltip" title="More workers = faster conversion">ℹ️</span>
+                        </label>
+                        <input type="number" id="parallel" value="4" min="1" max="16" />
+                    </div>
+
+                    <!-- Force Overwrite -->
+                    <div class="option-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="force" checked />
+                            <span data-i18n="options.force">Force Overwrite</span>
+                        </label>
+                    </div>
+
+                    <!-- Keep Temp Files -->
+                    <div class="option-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="keepTemp" />
+                            <span data-i18n="options.keepTemp">Keep Temporary Files</span>
+                        </label>
+                    </div>
+
+                    <!-- Remove Watermark -->
+                    <div class="option-group checkbox-group">
+                        <label>
+                            <input type="checkbox" id="removeWatermark" />
+                            <span data-i18n="options.removeWatermark">Remove NotebookLM Watermark</span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+            <!-- File List -->
+            <section class="file-list-section" id="fileListSection" style="display: none;">
+                <h3 data-i18n="files.title">Files to Convert</h3>
+                <div id="fileList" class="file-list"></div>
+                <button class="btn-primary btn-large" onclick="startConversion()">
+                    <span data-i18n="files.convert">🚀 Start Conversion</span>
+                </button>
+            </section>
+
+            <!-- Progress Section -->
+            <section class="progress-section" id="progressSection" style="display: none;">
+                <h3 data-i18n="progress.title">Conversion Progress</h3>
+                <div id="progressList" class="progress-list"></div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <h3 data-i18n="results.title">Conversion Results</h3>
+                <div id="resultsList" class="results-list"></div>
+            </section>
+        </main>
+
+        <!-- Star Banner (Bottom) -->
+        <div class="star-banner">
+            <span class="star-emoji">⭐</span>
+            <span class="star-text" data-i18n="star.text">Like this project? Give us a star on GitHub!</span>
+            <a href="https://github.com/neosun100/notebookLM2PPT" target="_blank" class="star-link" data-i18n="star.link">
+                ⭐ Star on GitHub →
+            </a>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="https://github.com/neosun100/notebookLM2PPT" target="_blank">GitHub</a>
+                <a href="https://pypi.org/project/pdfslides2ppt/" target="_blank">PyPI</a>
+                <a href="https://hub.docker.com/r/neosun/notebooklm2ppt" target="_blank">Docker Hub</a>
+            </div>
+            <p class="version">v1.4.0</p>
+            <p class="copyright">Made with ❤️ by <a href="https://github.com/neosun100" target="_blank">neosun100</a></p>
+        </footer>
+    </div>
+
+    <script src="/static/js/i18n.js?v=1.3.0"></script>
+    <script src="/static/js/app.js?v=1.3.0"></script>
+</body>
+</html>
