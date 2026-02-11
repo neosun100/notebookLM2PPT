@@ -1,6 +1,7 @@
 // i18n translations - 18 languages
 const translations = {
     'en': {
+        'header.subtitle': 'Convert NotebookLM PDF to PowerPoint · Auto Watermark Removal',
         'upload.title': 'Drop PDF files here or click to browse',
         'upload.subtitle': 'Support single or multiple PDF files',
         'upload.button': 'Select Files',
@@ -14,10 +15,11 @@ const translations = {
         'files.convert': '🚀 Start Conversion',
         'progress.title': 'Conversion Progress',
         'results.title': 'Conversion Results',
-        'star.text': 'Enjoying PDF2PPT? Give us a star on GitHub!',
+        'star.text': 'Enjoying notebookLM2PPT? Give us a star on GitHub!',
         'star.link': 'Star on GitHub →'
     },
     'zh-CN': {
+        'header.subtitle': 'NotebookLM PDF 转 PowerPoint · 自动去除水印',
         'upload.title': '拖放 PDF 文件到这里或点击浏览',
         'upload.subtitle': '支持单个或多个 PDF 文件',
         'upload.button': '选择文件',
@@ -31,10 +33,11 @@ const translations = {
         'files.convert': '🚀 开始转换',
         'progress.title': '转换进度',
         'results.title': '转换结果',
-        'star.text': '喜欢 PDF2PPT？给我们一个 Star 吧！',
+        'star.text': '喜欢 notebookLM2PPT？给我们一个 Star 吧！',
         'star.link': '前往 GitHub →'
     },
     'zh-TW': {
+        'header.subtitle': 'NotebookLM PDF 轉 PowerPoint · 自動去除浮水印',
         'upload.title': '拖放 PDF 檔案到這裡或點擊瀏覽',
         'upload.subtitle': '支援單個或多個 PDF 檔案',
         'upload.button': '選擇檔案',
@@ -48,10 +51,11 @@ const translations = {
         'files.convert': '🚀 開始轉換',
         'progress.title': '轉換進度',
         'results.title': '轉換結果',
-        'star.text': '喜歡 PDF2PPT？給我們一個 Star 吧！',
+        'star.text': '喜歡 notebookLM2PPT？給我們一個 Star 吧！',
         'star.link': '前往 GitHub →'
     },
     'ja': {
+        'header.subtitle': 'NotebookLM PDF を PowerPoint に変換 · 自動透かし除去',
         'upload.title': 'PDFファイルをドロップまたはクリックして選択',
         'upload.subtitle': '単一または複数のPDFファイルをサポート',
         'upload.button': 'ファイルを選択',
@@ -65,10 +69,11 @@ const translations = {
         'files.convert': '🚀 変換開始',
         'progress.title': '変換進行状況',
         'results.title': '変換結果',
-        'star.text': 'PDF2PPTが気に入りましたか？GitHubでスターをください！',
+        'star.text': 'notebookLM2PPTが気に入りましたか？GitHubでスターをください！',
         'star.link': 'GitHubへ →'
     },
     'ko': {
+        'header.subtitle': 'NotebookLM PDF를 PowerPoint로 변환 · 자동 워터마크 제거',
         'upload.title': 'PDF 파일을 여기에 끌어다 놓거나 클릭하여 찾아보기',
         'upload.subtitle': '단일 또는 여러 PDF 파일 지원',
         'upload.button': '파일 선택',
@@ -82,10 +87,11 @@ const translations = {
         'files.convert': '🚀 변환 시작',
         'progress.title': '변환 진행률',
         'results.title': '변환 결과',
-        'star.text': 'PDF2PPT가 마음에 드셨나요? GitHub에서 스타를 눌러주세요!',
+        'star.text': 'notebookLM2PPT가 마음에 드셨나요? GitHub에서 스타를 눌러주세요!',
         'star.link': 'GitHub에서 스타 →'
     },
     'fr': {
+        'header.subtitle': 'Convertir NotebookLM PDF en PowerPoint · Suppression auto du filigrane',
         'upload.title': 'Déposez les fichiers PDF ici ou cliquez pour parcourir',
         'upload.subtitle': 'Prise en charge de fichiers PDF uniques ou multiples',
         'upload.button': 'Sélectionner des fichiers',
@@ -99,10 +105,11 @@ const translations = {
         'files.convert': '🚀 Démarrer la conversion',
         'progress.title': 'Progression de la conversion',
         'results.title': 'Résultats de la conversion',
-        'star.text': 'Vous aimez PDF2PPT ? Donnez-nous une étoile sur GitHub !',
+        'star.text': 'Vous aimez notebookLM2PPT ? Donnez-nous une étoile sur GitHub !',
         'star.link': 'Étoile sur GitHub →'
     },
     'de': {
+        'header.subtitle': 'NotebookLM PDF in PowerPoint konvertieren · Auto-Wasserzeichen-Entfernung',
         'upload.title': 'PDF-Dateien hier ablegen oder klicken zum Durchsuchen',
         'upload.subtitle': 'Unterstützt einzelne oder mehrere PDF-Dateien',
         'upload.button': 'Dateien auswählen',
@@ -116,10 +123,11 @@ const translations = {
         'files.convert': '🚀 Konvertierung starten',
         'progress.title': 'Konvertierungsfortschritt',
         'results.title': 'Konvertierungsergebnisse',
-        'star.text': 'Gefällt Ihnen PDF2PPT? Geben Sie uns einen Stern auf GitHub!',
+        'star.text': 'Gefällt Ihnen notebookLM2PPT? Geben Sie uns einen Stern auf GitHub!',
         'star.link': 'Stern auf GitHub →'
     },
     'es': {
+        'header.subtitle': 'Convertir NotebookLM PDF a PowerPoint · Eliminación automática de marca de agua',
         'upload.title': 'Suelta archivos PDF aquí o haz clic para explorar',
         'upload.subtitle': 'Admite archivos PDF únicos o múltiples',
         'upload.button': 'Seleccionar archivos',
@@ -133,10 +141,11 @@ const translations = {
         'files.convert': '🚀 Iniciar conversión',
         'progress.title': 'Progreso de conversión',
         'results.title': 'Resultados de conversión',
-        'star.text': '¿Te gusta PDF2PPT? ¡Danos una estrella en GitHub!',
+        'star.text': '¿Te gusta notebookLM2PPT? ¡Danos una estrella en GitHub!',
         'star.link': 'Estrella en GitHub →'
     },
     'pt': {
+        'header.subtitle': 'Converter NotebookLM PDF para PowerPoint · Remoção automática de marca d\'água',
         'upload.title': 'Solte arquivos PDF aqui ou clique para navegar',
         'upload.subtitle': 'Suporta arquivos PDF únicos ou múltiplos',
         'upload.button': 'Selecionar arquivos',
@@ -150,10 +159,11 @@ const translations = {
         'files.convert': '🚀 Iniciar conversão',
         'progress.title': 'Progresso da conversão',
         'results.title': 'Resultados da conversão',
-        'star.text': 'Gostou do PDF2PPT? Dê-nos uma estrela no GitHub!',
+        'star.text': 'Gostou do notebookLM2PPT? Dê-nos uma estrela no GitHub!',
         'star.link': 'Estrela no GitHub →'
     },
     'it': {
+        'header.subtitle': 'Convertire NotebookLM PDF in PowerPoint · Rimozione automatica filigrana',
         'upload.title': 'Trascina i file PDF qui o clicca per sfogliare',
         'upload.subtitle': 'Supporta file PDF singoli o multipli',
         'upload.button': 'Seleziona file',
@@ -167,10 +177,11 @@ const translations = {
         'files.convert': '🚀 Avvia conversione',
         'progress.title': 'Avanzamento conversione',
         'results.title': 'Risultati conversione',
-        'star.text': 'Ti piace PDF2PPT? Dacci una stella su GitHub!',
+        'star.text': 'Ti piace notebookLM2PPT? Dacci una stella su GitHub!',
         'star.link': 'Stella su GitHub →'
     },
     'ru': {
+        'header.subtitle': 'Конвертировать NotebookLM PDF в PowerPoint · Автоудаление водяного знака',
         'upload.title': 'Перетащите PDF файлы сюда или нажмите для выбора',
         'upload.subtitle': 'Поддержка одного или нескольких PDF файлов',
         'upload.button': 'Выбрать файлы',
@@ -184,10 +195,11 @@ const translations = {
         'files.convert': '🚀 Начать конвертацию',
         'progress.title': 'Прогресс конвертации',
         'results.title': 'Результаты конвертации',
-        'star.text': 'Нравится PDF2PPT? Поставьте звезду на GitHub!',
+        'star.text': 'Нравится notebookLM2PPT? Поставьте звезду на GitHub!',
         'star.link': 'Звезда на GitHub →'
     },
     'ar': {
+        'header.subtitle': 'تحويل NotebookLM PDF إلى PowerPoint · إزالة تلقائية للعلامة المائية',
         'upload.title': 'اسحب ملفات PDF هنا أو انقر للتصفح',
         'upload.subtitle': 'يدعم ملفات PDF فردية أو متعددة',
         'upload.button': 'اختر الملفات',
@@ -201,10 +213,11 @@ const translations = {
         'files.convert': '🚀 بدء التحويل',
         'progress.title': 'تقدم التحويل',
         'results.title': 'نتائج التحويل',
-        'star.text': 'هل أعجبك PDF2PPT؟ امنحنا نجمة على GitHub!',
+        'star.text': 'هل أعجبك notebookLM2PPT؟ امنحنا نجمة على GitHub!',
         'star.link': 'نجمة على GitHub →'
     },
     'hi': {
+        'header.subtitle': 'NotebookLM PDF को PowerPoint में बदलें · स्वचालित वॉटरमार्क हटाना',
         'upload.title': 'PDF फ़ाइलें यहाँ छोड़ें या ब्राउज़ करने के लिए क्लिक करें',
         'upload.subtitle': 'एकल या एकाधिक PDF फ़ाइलों का समर्थन',
         'upload.button': 'फ़ाइलें चुनें',
@@ -218,10 +231,11 @@ const translations = {
         'files.convert': '🚀 रूपांतरण शुरू करें',
         'progress.title': 'रूपांतरण प्रगति',
         'results.title': 'रूपांतरण परिणाम',
-        'star.text': 'PDF2PPT पसंद आया? GitHub पर हमें स्टार दें!',
+        'star.text': 'notebookLM2PPT पसंद आया? GitHub पर हमें स्टार दें!',
         'star.link': 'GitHub पर स्टार →'
     },
     'th': {
+        'header.subtitle': 'แปลง NotebookLM PDF เป็น PowerPoint · ลบลายน้ำอัตโนมัติ',
         'upload.title': 'วางไฟล์ PDF ที่นี่หรือคลิกเพื่อเรียกดู',
         'upload.subtitle': 'รองรับไฟล์ PDF เดี่ยวหรือหลายไฟล์',
         'upload.button': 'เลือกไฟล์',
@@ -235,10 +249,11 @@ const translations = {
         'files.convert': '🚀 เริ่มการแปลง',
         'progress.title': 'ความคืบหน้าการแปลง',
         'results.title': 'ผลการแปลง',
-        'star.text': 'ชอบ PDF2PPT ไหม? ให้ดาวเราบน GitHub!',
+        'star.text': 'ชอบ notebookLM2PPT ไหม? ให้ดาวเราบน GitHub!',
         'star.link': 'ดาวบน GitHub →'
     },
     'vi': {
+        'header.subtitle': 'Chuyển NotebookLM PDF sang PowerPoint · Tự động xóa watermark',
         'upload.title': 'Thả tệp PDF vào đây hoặc nhấp để duyệt',
         'upload.subtitle': 'Hỗ trợ một hoặc nhiều tệp PDF',
         'upload.button': 'Chọn tệp',
@@ -252,10 +267,11 @@ const translations = {
         'files.convert': '🚀 Bắt đầu chuyển đổi',
         'progress.title': 'Tiến trình chuyển đổi',
         'results.title': 'Kết quả chuyển đổi',
-        'star.text': 'Thích PDF2PPT? Hãy cho chúng tôi một sao trên GitHub!',
+        'star.text': 'Thích notebookLM2PPT? Hãy cho chúng tôi một sao trên GitHub!',
         'star.link': 'Sao trên GitHub →'
     },
     'nl': {
+        'header.subtitle': 'NotebookLM PDF naar PowerPoint · Automatische watermerkverwijdering',
         'upload.title': 'Sleep PDF-bestanden hierheen of klik om te bladeren',
         'upload.subtitle': 'Ondersteunt enkele of meerdere PDF-bestanden',
         'upload.button': 'Bestanden selecteren',
@@ -269,10 +285,11 @@ const translations = {
         'files.convert': '🚀 Conversie starten',
         'progress.title': 'Conversievoortgang',
         'results.title': 'Conversieresultaten',
-        'star.text': 'Bevalt PDF2PPT? Geef ons een ster op GitHub!',
+        'star.text': 'Bevalt notebookLM2PPT? Geef ons een ster op GitHub!',
         'star.link': 'Ster op GitHub →'
     },
     'pl': {
+        'header.subtitle': 'Konwertuj NotebookLM PDF na PowerPoint · Automatyczne usuwanie znaku wodnego',
         'upload.title': 'Upuść pliki PDF tutaj lub kliknij, aby przeglądać',
         'upload.subtitle': 'Obsługuje pojedyncze lub wiele plików PDF',
         'upload.button': 'Wybierz pliki',
@@ -286,10 +303,11 @@ const translations = {
         'files.convert': '🚀 Rozpocznij konwersję',
         'progress.title': 'Postęp konwersji',
         'results.title': 'Wyniki konwersji',
-        'star.text': 'Podoba Ci się PDF2PPT? Daj nam gwiazdkę na GitHub!',
+        'star.text': 'Podoba Ci się notebookLM2PPT? Daj nam gwiazdkę na GitHub!',
         'star.link': 'Gwiazdka na GitHub →'
     },
     'tr': {
+        'header.subtitle': 'NotebookLM PDF → PowerPoint · Otomatik Filigran Kaldırma',
         'upload.title': 'PDF dosyalarını buraya bırakın veya göz atmak için tıklayın',
         'upload.subtitle': 'Tek veya birden fazla PDF dosyasını destekler',
         'upload.button': 'Dosya Seç',
@@ -303,7 +321,7 @@ const translations = {
         'files.convert': '🚀 Dönüştürmeyi Başlat',
         'progress.title': 'Dönüştürme İlerlemesi',
         'results.title': 'Dönüştürme Sonuçları',
-        'star.text': 'PDF2PPT hoşunuza gitti mi? GitHub\'da bize yıldız verin!',
+        'star.text': 'notebookLM2PPT hoşunuza gitti mi? GitHub\'da bize yıldız verin!',
         'star.link': 'GitHub\'da Yıldız →'
     }
 };

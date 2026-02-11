@@ -604,6 +604,38 @@ body::after {
 }
 
 /* Epic star banner with 3D effect */
+.pipeline-banner {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 1.2rem 2rem;
+    margin: 2rem 0 1.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.pipeline-step {
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.5rem 1.2rem;
+    background: rgba(99, 102, 241, 0.15);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.pipeline-arrow {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: bold;
+}
+
+/* Epic star banner with 3D effect */
 .star-banner {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(40px) saturate(200%) brightness(120%);
