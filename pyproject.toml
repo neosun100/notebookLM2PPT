@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "notebooklm2ppt"
+version = "1.4.0"
+description = "Convert NotebookLM PDF exports to PowerPoint with watermark removal and vector graphics"
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    {name = "neosun100"}
+]
+keywords = ["notebooklm", "pdf", "ppt", "powerpoint", "converter", "watermark", "slides", "vector"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "python-pptx",
+    "pypdf",
+    "rich",
+    "pillow",
+    "PyMuPDF",
+]
+
+[project.optional-dependencies]
+server = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "python-multipart>=0.0.6",
+    "jinja2>=3.1.2",
+]
+mcp = [
+    "fastmcp>=0.1.0",
+]
+test = [
+    "pytest>=7.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/neosun100/notebookLM2PPT"
+Repository = "https://github.com/neosun100/notebookLM2PPT"
+Issues = "https://github.com/neosun100/notebookLM2PPT/issues"
+
+[project.scripts]
+pdf2ppt = "pdf2ppt:main"
+
+[tool.setuptools]
+license-files = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
