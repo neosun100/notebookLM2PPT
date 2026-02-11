@@ -1,176 +1,229 @@
-[English](README.md) | [简体中文](README_CN.md)
+[English](README.md) | [简体中文](README_CN.md) | [繁體中文](README_TW.md) | [日本語](README_JP.md)
 
-# 📝 notebookLM2PPT
+# pdf2ppt
 
-[![Python](https://img.shields.io/badge/Python-3.9+-green?logo=python)](https://python.org)
+[![PyPI version](https://badge.fury.io/py/pdfslides2ppt.svg)](https://badge.fury.io/py/pdfslides2ppt)
+[![Python](https://img.shields.io/pypi/pyversions/pdfslides2ppt.svg)](https://pypi.org/project/pdfslides2ppt/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Docker](https://img.shields.io/badge/Docker-Ready-blue?logo=docker)](https://hub.docker.com)
+[![GitHub stars](https://img.shields.io/github/stars/neosun100/pdf2ppt.svg)](https://github.com/neosun100/pdf2ppt/stargazers)
 
-> Convert NotebookLM PDF exports to PowerPoint with **watermark removal** and **vector graphics** (highest resolution).
+Convert PDF Slides to PowerPoint Presentations with **Vector Graphics** (highest resolution).
 
-
-![Web UI Screenshot](docs/screenshot_web_ui.png)
+![notebookLM2PPT Web UI](docs/screenshot_web_ui.png?v=1.4.0)
 
 ## ✨ Features
 
-- 🧹 **Watermark Removal** - Auto-remove NotebookLM bottom-right watermark (gradient-aware)
 - 🎯 **Vector Graphics** - Maintains highest resolution in generated PPT
 - 📝 **Metadata Conversion** - Preserves title, author and other metadata
 - 📐 **Auto Detection** - Automatically detects slide size and aspect ratio
+- 🚀 **Easy to Use** - Simple command line interface with beautiful output
 - 📄 **Page Selection** - Convert specific pages with `--pages` option
 - ⚡ **Parallel Processing** - Speed up conversion with `--parallel` option
-- 🎨 **Web UI** - Modern glassmorphism web interface with drag-and-drop
+- 🔍 **Dependency Check** - Automatically checks for required tools
+- 🎨 **Web UI** - Modern web interface with drag-and-drop support
 - 📡 **REST API** - FastAPI server with async processing
 - 🔧 **MCP Support** - Model Context Protocol for AI integration
-- 🐳 **Docker Ready** - All-in-one Docker image
+- 🐳 **Docker Ready** - All-in-one Docker image available
+- 💎 **Glassmorphism Design** - Ultra modern frosted glass UI with neon effects
 - 🌍 **18 Languages** - Full internationalization support
+
+### 🌍 Supported Languages
+
+| Language | Code | Language | Code |
+|----------|------|----------|------|
+| English | en | Italiano | it |
+| 简体中文 | zh-CN | Русский | ru |
+| 繁體中文 | zh-TW | العربية | ar |
+| 日本語 | ja | हिन्दी | hi |
+| 한국어 | ko | ไทย | th |
+| Français | fr | Tiếng Việt | vi |
+| Deutsch | de | Nederlands | nl |
+| Español | es | Polski | pl |
+| Português | pt | Türkçe | tr |
+
+## 🎯 Motivation
+
+- **LaTeX** users can easily convert [`beamer`](https://ctan.org/pkg/beamer) slides from PDF to PPT
+- **Typst** users can easily convert [`touying`](https://typst.app/universe/package/touying/) slides from PDF to PPT
 
 ## 🚀 Quick Start
 
-### Option 1: Command Line (pip)
+### Option 1: Command Line (pipx)
 
 ```bash
-# Install
-pip install -e .
+# Install via pipx (recommended)
+pipx install pdfslides2ppt
 
-# Convert with watermark removal
-pdf2ppt input.pdf output.pptx --remove-watermark
-
-# Short form
-pdf2ppt input.pdf --rw --force
+# Convert PDF to PPT
+pdf2ppt input.pdf output.pptx
 ```
 
-### Option 2: Docker
+### Option 2: Web UI (Docker)
 
+**For x86_64 / AMD64 (Linux servers, Intel Macs):**
 ```bash
-docker run -d -p 8100:8100 neosun/notebooklm2ppt:latest
+docker run -d -p 8100:8100 neosun/pdf2ppt:1.2.0-amd64
 ```
 
-Access at: http://localhost:8100
+**For ARM64 (Apple Silicon Macs, ARM servers):**
+```bash
+docker run -d -p 8100:8100 neosun/pdf2ppt:1.2.0-arm64
+```
+
+**Auto-detect architecture:**
+```bash
+docker run -d -p 8100:8100 neosun/pdf2ppt:latest
+```
+
+**Access at:** http://localhost:8100
 
 ### Option 3: API Server
 
 ```bash
-pip install -e ".[server]"
+# Install with server dependencies
+pip install "pdfslides2ppt[server]"
+
+# Start server
 python -m uvicorn web.app:app --host 0.0.0.0 --port 8100
 ```
+
+**API Documentation:** http://localhost:8100/docs
 
 ## 📦 Installation
 
 ### Prerequisites
 
 - **Python >= 3.9**
-- [**pdf2svg**](https://github.com/dawbarton/pdf2svg) - PDF to SVG conversion
-- [**Inkscape**](https://inkscape.org/) - SVG to EMF conversion
+- [**pdf2svg**](https://github.com/dawbarton/pdf2svg) - for PDF to SVG conversion
+- [**Inkscape**](https://inkscape.org/) - for SVG to EMF conversion
 
+### Install Dependencies
+
+**macOS:**
 ```bash
-# macOS
 brew install pdf2svg inkscape
+```
 
-# Ubuntu/Debian
+**Ubuntu/Debian:**
+```bash
 sudo apt-get install pdf2svg inkscape
 ```
 
-### Install
+**Windows:**
+- Download and install [pdf2svg](https://github.com/dawbarton/pdf2svg) and [Inkscape](https://inkscape.org/)
+- Add them to your PATH
+
+### Install pdf2ppt
 
 ```bash
-git clone https://github.com/neosun100/notebookLM2PPT.git
-cd notebookLM2PPT
-pip install -e .
+# Recommended: Install with pipx (isolated environment)
+pipx install pdfslides2ppt
+
+# Or install with pip
+pip install pdfslides2ppt
 ```
 
 ## 📖 Usage
 
-### Basic
+### Basic Usage
 
 ```bash
-pdf2ppt input.pdf                          # Auto output: input.pptx
-pdf2ppt input.pdf output.pptx              # Specify output
-pdf2ppt input.pdf --rw                     # Remove watermark
-pdf2ppt input.pdf --rw -f                  # Remove watermark + force overwrite
+# Specify output file
+pdf2ppt input.pdf output.pptx
+
+# Auto-generate output filename (input.pptx)
+pdf2ppt input.pdf
+
+# Verbose mode
+pdf2ppt input.pdf --verbose
 ```
 
-### Advanced
+### Advanced Usage
 
 ```bash
-pdf2ppt input.pdf -p 1-5,7,9-11           # Specific pages
-pdf2ppt input.pdf -j 4 --rw               # Parallel + watermark removal
-pdf2ppt input.pdf --verbose --no-clean     # Debug mode
+# Convert specific pages
+pdf2ppt input.pdf -p 1-5,7,9-11
+
+# Parallel processing (4 workers)
+pdf2ppt input.pdf -j 4
+
+# Force overwrite existing file
+pdf2ppt input.pdf output.pptx --force
+
+# Keep temporary files for debugging
+pdf2ppt input.pdf --no-clean
 ```
 
-### CLI Options
+### Command Line Options
 
 ```
+usage: pdf2ppt [-h] [-v] [--verbose] [--no-clean] [--no-check] [--force]
+               [--pages PAGES] [--parallel PARALLEL]
+               [--pdf2svg-path PATH] [--inkscape-path PATH]
+               input [output]
+
 positional arguments:
-  input                    Input PDF file
-  output                   Output PPTX file (default: input.pptx)
+  input                 Input PDF file
+  output                Output PPTX file (default: input.pptx)
 
 options:
-  -v, --version            Show version
-  --remove-watermark, --rw Remove NotebookLM watermark
-  --pages, -p PAGES        Page range (e.g., "1-5,7,9-11")
-  --parallel, -j N         Parallel workers (default: 1)
-  --force, -f              Overwrite output file
-  --verbose                Verbose output
-  --no-clean               Keep temporary files
+  -h, --help            show this help message and exit
+  -v, --version         show program's version number and exit
+  --verbose             Verbose output
+  --no-clean            Keep temporary files
+  --no-check            Skip SVG filter check
+  --force, -f           Overwrite output file if exists
+  --pages, -p PAGES     Page range (e.g., "1-5,7,9-11")
+  --parallel, -j N      Parallel workers (default: 1)
+  --pdf2svg-path PATH   Path to pdf2svg executable
+  --inkscape-path PATH  Path to inkscape executable
 ```
 
-## 🔧 How It Works
+## 🔧 Technical Implementation
 
-```
-PDF → [Remove Watermark] → PDF → SVG → EMF → PPTX
-       (optional)          pdf2svg  inkscape  python-pptx
-```
-
-1. **Watermark Removal** (optional): PyMuPDF samples background colors column-by-column above the watermark region, then draws matching rectangles to cover it. Supports gradient backgrounds.
-2. **PDF → SVG**: `pdf2svg` converts each page to vector SVG
-3. **SVG → EMF**: `inkscape` converts SVG to EMF (required by python-pptx)
-4. **EMF → PPTX**: `python-pptx` assembles the final presentation
-
-## 🧪 Testing
-
-```bash
-pip install -e ".[test]"
-pytest tests/ -v
-```
+1. Convert PDF to SVG using `pdf2svg`
+2. Convert SVG to EMF using `inkscape` (due to python-pptx limitations)
+3. Insert EMF into PPT using `python-pptx`
 
 ## 🛠️ Tech Stack
 
 | Component | Technology |
 |-----------|------------|
 | Language | Python 3.9+ |
-| PDF Processing | pypdf, PyMuPDF |
+| PDF Processing | pypdf |
 | PPT Generation | python-pptx |
 | PDF to SVG | pdf2svg |
 | SVG to EMF | Inkscape |
 | CLI Output | rich |
-| Web Server | FastAPI |
-| AI Integration | FastMCP |
 
-## 🏗️ Project Structure
+## ⚠️ Known Issues
 
-```
-notebookLM2PPT/
-├── src/pdf2ppt/
-│   ├── __init__.py        # Core conversion engine + CLI
-│   └── watermark.py       # Watermark removal module
-├── web/
-│   ├── app.py             # FastAPI server
-│   ├── templates/         # HTML templates
-│   └── static/            # CSS + JS (18 languages)
-├── mcp/
-│   └── mcp_server.py      # MCP tool server
-├── tests/
-│   └── test_all.py        # Comprehensive test suite
-├── pyproject.toml
-├── Dockerfile
-└── docker-compose.yml
-```
+### Transparent Background
+
+Elements with transparency are not fully supported due to dependency limitations. You will receive a warning when such issues are detected. You can manually copy the generated SVG to fix the problem.
+
+See [#1](https://github.com/neosun100/pdf2ppt/issues/1) for more details.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-MIT License - see [LICENSE](LICENSE)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+Copyright © 2023-2024 Teddy van Jerry ([Wuqiong Zhao](https://wqzhao.org))
 
 ## ⭐ Star History
 
-[![Star History Chart](https://api.star-history.com/svg?repos=neosun100/notebookLM2PPT&type=Date)](https://star-history.com/#neosun100/notebookLM2PPT)
+[![Star History Chart](https://api.star-history.com/svg?repos=neosun100/pdf2ppt&type=Date)](https://star-history.com/#neosun100/pdf2ppt)
+
+## 📱 Follow Us
+
+![WeChat](https://img.aws.xin/uPic/扫码_搜索联合传播样式-标准色版.png)
