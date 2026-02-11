@@ -8,6 +8,9 @@
 
 > Convert NotebookLM PDF exports to PowerPoint with **watermark removal** and **vector graphics** (highest resolution).
 
+
+![Web UI Screenshot](docs/screenshot_web_ui.png)
+
 ## ✨ Features
 
 - 🧹 **Watermark Removal** - Auto-remove NotebookLM bottom-right watermark (gradient-aware)
